@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018", "dom"], // Specify a list of libraries the project will use
+    "target": "es2018", // Set the JavaScript version for output files
+    "module": "commonjs", // Set the module system (Node.js uses CommonJS)
+    "strict": true, // Enable all strict type-checking options
+    "baseUrl": ".", // Base directory to resolve non-relative module names
+    "outDir": "dist", // Redirect output structure to the 'dist' folder
+    "rootDir": ".", // Specify the root directory of source files
+    "skipLibCheck": true, // Skip type checking of all declaration files (*.d.ts)
+    "esModuleInterop": true, // Enables compatibility with default imports from modules
+    "moduleResolution": "node", // Choose a module resolution strategy
+    "resolveJsonModule": true,
+    "removeComments": true,
+
+    "paths": {
+      "@src/*": ["src/*"] // absolute paths
+    },
+
+    "strictNullChecks": true, // Enable strict null checks
+    "strictFunctionTypes": true, // Enable strict checking of function types
+    "strictPropertyInitialization": true, // Ensure non-undefined class properties are initialized in the constructor
+    "strictBindCallApply": true, // Enable stricter checking of the bind, call, and apply methods on functions
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+  },
+  "include": [
+    "src/**/*" // Include all files in the src directory
+  ],
+  "exclude": [
+    "node_modules", // Exclude the node_modules directory
+    "**/*.spec.ts",
+    "**/*.test.ts" // Exclude test files
+  ]
+}
